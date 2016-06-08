@@ -87,48 +87,52 @@
                           <li class="active">Users</li>
                         </ol>
 
-                        <table class="table table-striped">
-                            <tr>
-                                <th><input type = "checkbox"></th>
-                                <th>Full Name</th>
-                                <th>Email</th>
-                                <th>Group</th>
-                            </tr>
+                        <table id = "sort-table" class="table table-striped tablesorter">
+                            <thead>
+                                <tr>
+                                    <th><input type = "checkbox"></th>
+                                    <th><i class="glyphicon glyphicon-chevron-down"></i> Full Name</th>
+                                    <th><i class="glyphicon glyphicon-chevron-down"></i> Email</th>
+                                    <th><i class="glyphicon glyphicon-chevron-down"></i> Group</th>
+                                </tr>
+                            </thead>
 
-                            <tr>
-                                <td><input type = "checkbox"></td>
-                                <td><a href = "page.html">John</a></td>
-                                <td>john@gmail.com</td>
-                                <td>Admin</td>
-                            </tr>
+                            <tbody>
+                                <tr>
+                                    <td><input type = "checkbox"></td>
+                                    <td><a href = "page.html">John</a></td>
+                                    <td>john@gmail.com</td>
+                                    <td>Admin</td>
+                                </tr>
 
-                             <tr>
-                                <td><input type = "checkbox"></td>
-                                <td><a href = "page.html">Richard</a></td>
-                                <td>richard@gmail.com</td>
-                                <td>Admin</td>
-                            </tr>
+                                 <tr>
+                                    <td><input type = "checkbox"></td>
+                                    <td><a href = "page.html">Richard</a></td>
+                                    <td>richard@gmail.com</td>
+                                    <td>Admin</td>
+                                </tr>
 
-                             <tr>
-                                <td><input type = "checkbox"></td>
-                                <td><a href = "page.html">Michael</a></td>
-                                <td>michael@gmail.com</td>
-                                <td>Admin</td>
-                            </tr>
+                                 <tr>
+                                    <td><input type = "checkbox"></td>
+                                    <td><a href = "page.html">Michael</a></td>
+                                    <td>michael@gmail.com</td>
+                                    <td>Admin</td>
+                                </tr>
 
-                             <tr>
-                                <td><input type = "checkbox"></td>
-                                <td><a href = "page.html">Roger</a></td>
-                                <td>roger@gmail.com</td>
-                                <td>Admin</td>
-                            </tr>
+                                 <tr>
+                                    <td><input type = "checkbox"></td>
+                                    <td><a href = "page.html">Roger</a></td>
+                                    <td>roger@gmail.com</td>
+                                    <td>Admin</td>
+                                </tr>
 
-                             <tr>
-                                <td><input type = "checkbox"></td>
-                                <td><a href = "page.html">Josh</a></td>
-                                <td>josh@gmail.com</td>
-                                <td>Registered</td>
-                            </tr>
+                                 <tr>
+                                    <td><input type = "checkbox"></td>
+                                    <td><a href = "page.html">Josh</a></td>
+                                    <td>josh@gmail.com</td>
+                                    <td>Registered</td>
+                                </tr>
+                            </tbody>
                         </table> <!-- ENDof Table table-striped -->
 
                     <!-- Pagination -->
@@ -166,7 +170,17 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src = "js/jquery.tablesorter.js"></script>
     <script src="js/bootstrap.js"></script>
+
+
+    <script>
+       $(function(){
+          $('#sort-table').tablesorter({
+            sortList:[[0,0], [1,0]]
+          });
+        });
+    </script>
 
   </body>
 </html>

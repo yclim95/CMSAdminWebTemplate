@@ -167,7 +167,17 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src = "js/jquery.tablesorter.js"></script>
     <script src="js/bootstrap.js"></script>
+
+
+    <script>
+       $(function(){
+          $('#sort-table').tablesorter({
+            sortList:[[0,0], [1,0]]
+          });
+        });
+    </script>
 
   </body>
 </html>

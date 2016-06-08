@@ -88,26 +88,30 @@
                         </ol>
 
 
-                        <table class="table table-striped">
-                            <tr>
-                                <th><input type = "checkbox"></th>
-                                <th>Category Title</th>
-                            </tr>
+                        <table id = "sort-table" class="table table-striped tablesorter">
+                            <thead>
+                                <tr>
+                                    <th><input type = "checkbox"></th>
+                                    <th><i class="glyphicon glyphicon-chevron-down"></i> Category Title</th>
+                                </tr>
+                            </thead>
 
-                            <tr>
-                                <td><input type = "checkbox"></td>
-                                <td><a href = "category.html">Sample Category 1</a></td>
-                            </tr>
+                            <tbody>
+                                <tr>
+                                    <td><input type = "checkbox"></td>
+                                    <td><a href = "category.html">Sample Category 1</a></td>
+                                </tr>
 
-                             <tr>
-                                <td><input type = "checkbox"></td>
-                                <td><a href = "category.html">Sample Category 2</a></td>
-                            </tr>
+                                <tr>
+                                    <td><input type = "checkbox"></td>
+                                    <td><a href = "category.html">Sample Category 2</a></td>
+                                </tr>
 
-                             <tr>
-                                <td><input type = "checkbox"></td>
-                                <td><a href = "category.html">Sample Category 3</a></td>
-                            </tr>
+                                 <tr>
+                                     <td><input type = "checkbox"></td>
+                                     <td><a href = "category.html">Sample Category 3</a></td>
+                                </tr>
+                            </tbody>
 
                         </table> <!-- ENDof Table table-striped -->
                     <!-- Pagination -->
@@ -145,7 +149,17 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src = "js/jquery.tablesorter.js"></script>
     <script src="js/bootstrap.js"></script>
+
+
+    <script>
+       $(function(){
+          $('#sort-table').tablesorter({
+            sortList:[[0,0], [1,0]]
+          });
+        });
+    </script>
 
   </body>
 </html>
